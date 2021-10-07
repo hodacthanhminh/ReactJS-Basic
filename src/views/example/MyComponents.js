@@ -1,34 +1,46 @@
 import React from 'react';
+import ChildComponents from './ChildComponents';
+import FormComponents from './FormComponents';
 
 class MyComponent extends React.Component {
 
-    state = {
-        name: 'Thanh Minh',
-        channel: 'Hoi dan it'
-    };
-    
-    
-    handleOnChangeName = (event) => {
+
+    state = { 
+        arrJob:[
+            { id: '1', title:'Front-end', salary:'500'},
+            { id: '2', title:'Tester', salary:'1500'},
+            { id: '3', title:'Project manangement', salary:'5000'}
+        ]
+    }
+
+    addNewJob = (job) => { 
         this.setState({
-            name: event.target.value,
-        });
+            arrJob: [...this.state.arrJob, job]
+        })
+    }
+
+    deleteJob = (job) => {
+        this.setState({
+            arrJob: this.state.arrJob.filter((item) => {
+                return (
+                    item.id !== job.id
+                )
+            })
+        })
+        // console.log('deleteJob', job)
     }
 
     render () {
 
-
-
         return (
             <>
-                <div className='first'>
-                    <input type='text' value={this.state.name}
-                        onChange={(event) => this.handleOnChangeName(event)} 
-                    />
-                    Hello my name is {this.state.name}
-                </div>
-                <div> 
-                    My youtube channel is {this.state.channel}
-                </div>
+            <FormComponents
+                addNewJob={this.addNewJob}
+            />
+            <ChildComponents 
+                arrJobs={this.state.arrJob}
+                deleteJob={this.deleteJob}
+            />
             </> 
         )
     }
