@@ -1,30 +1,30 @@
 import React, { Component } from 'react'
 
 export default class ChildComponents extends Component {
-    
+
     state = {
         showJobs: false
     };
-    
+
     handleButtonClick = () => {
-       this.setState({ 
-           showJobs: !this.state.showJobs 
+        this.setState({
+            showJobs: !this.state.showJobs
         });
     }
 
     render() {
 
-        let {arrJobs} = this.props;
-        let {showJobs} = this.state;
+        let { arrJobs } = this.props;
+        let { showJobs } = this.state;
 
         return (
             <>
-                { !showJobs ? 
+                {!showJobs ?
                     <div>
-                        <button onClick={() => this.handleButtonClick()}>Show</button>
+                        <button className="btn-show" onClick={() => this.handleButtonClick()}>Show</button>
                     </div>
-                :
-                    <> 
+                    :
+                    <>
                         <div className="job-lists">
                             {
                                 arrJobs.map((item, index) => {
@@ -41,7 +41,7 @@ export default class ChildComponents extends Component {
                             <button onClick={() => this.handleButtonClick()}>Hide</button>
                         </div>
                     </>
-                } 
+                }
             </>
         )
     }
@@ -50,7 +50,7 @@ export default class ChildComponents extends Component {
 // const ChildComponents = (props) => { 
 
 //     console.log('>>>check child props:',props)
-    
+
 //     let {name , age , address, arrJobs} = props;
 
 //     return (
