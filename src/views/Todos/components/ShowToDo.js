@@ -78,7 +78,7 @@ export default class ShowToDo extends Component {
             })}
           </div>
         ) : (
-          <div>List is empty</div>
+          <div className="todo-list-empty">List is empty</div>
         )}
       </div>
     );

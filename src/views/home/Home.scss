@@ -1,0 +1,25 @@
+.home__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+  flex-direction: column;
+
+  .home__content {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+
+    &-link {
+      color: #e279db;
+      text-decoration: none;
+    }
+  }
+
+  .home__logo {
+    width: 200px;
+    height: 200px;
+  }
+}
