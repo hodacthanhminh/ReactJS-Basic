@@ -54,6 +54,7 @@ export default class ListToDo extends Component {
   render() {
     return (
       <div className="todo-container">
+        <h3 className="todo-heading">CRUD TO DO application </h3>
         <AddToDo addNewToDoItem={this.addNewToDoItem} />
         <ShowToDo
           arrToDo={this.state.arrToDo}

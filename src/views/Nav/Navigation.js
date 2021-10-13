@@ -15,9 +15,9 @@ export default class Navigation extends Component {
             {" "}
             To do
           </NavLink>
-          <NavLink to="/example" activeClassName="active">
+          <NavLink to="/user-crud" activeClassName="active">
             {" "}
-            Example
+            CRUD user
           </NavLink>
           <NavLink exact={true} to="/user" activeClassName="active">
             User

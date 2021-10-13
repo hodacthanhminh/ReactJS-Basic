@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .home__wrapper {
   display: flex;
   justify-content: center;
@@ -13,7 +15,7 @@
     width: 60%;
 
     &-link {
-      color: #e279db;
+      color: $primary-color;
       text-decoration: none;
     }
   }

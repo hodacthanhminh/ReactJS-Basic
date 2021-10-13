@@ -24,7 +24,7 @@ function App() {
             <Route path="/todo">
               <ListToDo />
             </Route>
-            <Route path="/example" exact>
+            <Route path="/user-crud" exact>
               <MyComponent />
             </Route>
             <Route path="/user" exact>

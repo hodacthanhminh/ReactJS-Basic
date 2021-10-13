@@ -23,9 +23,14 @@ export default withRouter(
       let { listUser } = this.state;
 
       return (
-        <>
+        <div className="list-user">
+          <h3 className="list-user-heading">
+            {" "}
+            This page showing the list of users that have in the api{" "}
+          </h3>
           {listUser.length > 0 ? (
             <div className="list-user__container">
+              <br />
               {listUser.map((user, index) => {
                 return (
                   <div
@@ -51,7 +56,7 @@ export default withRouter(
           ) : (
             <div className="list-user--empty">Empty user</div>
           )}
-        </>
+        </div>
       );
     }
   }
